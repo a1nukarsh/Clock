@@ -6,8 +6,11 @@ function updateClock() {
   let currentMinute = currentTime.getMinutes();
   let currentSecond = currentTime.getSeconds();
 
-//   let timeOfDay = currentHour < 12 ? "AM" : "PM";
-  let currentTimeStr = currentHour + ":" + currentMinute + ":" + currentSecond 
+  currentMinute = (currentMinute < 10 ? "0" : "") + currentMinute;
+  currentSecond = (currentSecond < 10 ? "0" : "") + currentSecond;
 
-  document.getElementById('clock').innerHTML = currentTimeStr
+  //   let timeOfDay = currentHour < 12 ? "AM" : "PM";
+  let currentTimeStr = currentHour + ":" + currentMinute + ":" + currentSecond;
+
+  document.getElementById("clock").innerHTML = currentTimeStr;
 }
